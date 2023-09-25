@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <article class="card">
+      <div class="card__punctuation">
+        <p class="card__punctuation-title-1">Your Result</p>
+        <div class="score-circle">
+          <span class="score-circle__number">76</span>
+          <span class="score-circle__description">of 100</span>
+        </div>
+        <p class="card__punctuation-title-2">Great</p>
+        <p class="card__punctuation-text">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+
+      <div class="card__summary">
+        <p class="card__summary-title">Summary</p>
+        <div class="card__skills">
+          <div class="skill skill--reaction">
+            <div class="skill__left">
+              <img
+                src="./assets/images/icon-reaction.svg"
+                alt="Icon Reaction"
+                class="skill__icon"
+              />
+              <span class="skill__name skill__name--reaction">Reaction</span>
+            </div>
+
+            <div class="skill__rigth">
+              <span class="skill__score">80</span>
+              <span class="skill__hundred">/ 100</span>
+            </div>
+          </div>
+
+          <div class="skill skill--memory">
+            <div class="skill__left">
+              <img
+                src="./assets/images/icon-memory.svg"
+                alt="Icon Reaction"
+                class="skill__icon"
+              />
+              <span class="skill__name skill__name--memory">Memory</span>
+            </div>
+
+            <div class="skill__rigth">
+              <span class="skill__score">92</span>
+              <span class="skill__hundred">/ 100</span>
+            </div>
+          </div>
+
+          <div class="skill skill--verbal">
+            <div class="skill__left">
+              <img
+                src="./assets/images/icon-verbal.svg"
+                alt="Icon Reaction"
+                class="skill__icon"
+              />
+              <span class="skill__name skill__name--verbal">Verbal</span>
+            </div>
+
+            <div class="skill__rigth">
+              <span class="skill__score">61</span>
+              <span class="skill__hundred">/ 100</span>
+            </div>
+          </div>
+
+          <div class="skill skill--visual">
+            <div class="skill__left">
+              <img
+                src="./assets/images/icon-visual.svg"
+                alt="Icon Reaction"
+                class="skill__icon"
+              />
+              <span class="skill__name skill__name--visual">Visual</span>
+            </div>
+
+            <div class="skill__rigth">
+              <span class="skill__score">72</span>
+              <span class="skill__hundred">/ 100</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn">Continue</button>
+      </div>
+    </article>
+  </body>
+</html>

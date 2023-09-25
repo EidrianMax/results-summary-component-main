@@ -1,0 +1,224 @@
+/* Variables */
+:root {
+  /* Primary Colors */
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-opacity: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow: hsla(39, 100%, 56%);
+  --orangey-yellow-opacity: hsla(39, 100%, 56%, 0.1);
+  --green-teal: hsla(166, 100%, 37%);
+  --green-teal-opacity: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue: hsla(234, 85%, 45%);
+  --cobalt-blue-opacity: hsla(234, 85%, 45%, 0.1);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --gradient-background: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  --gradient-circle: linear-gradient(var(--violet-blue), var(--persian-blue));
+
+  /* Neutral Colors */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* Typography */
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+}
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/* card */
+.card__punctuation {
+  background-image: var(--gradient-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25em;
+  padding: 2em 3em;
+  border-radius: 0 0 2rem 2rem;
+}
+
+.card__punctuation-title-1 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--light-lavender);
+}
+
+.card__punctuation-title-2 {
+  color: var(--white);
+  font-size: 1.75rem;
+}
+
+.card__punctuation-text {
+  color: var(--light-lavender);
+  text-align: center;
+}
+
+.card__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem 2rem;
+}
+
+.card__summary-title {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--dark-gray-blue);
+}
+
+.card__skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+/* score-circle */
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: var(--gradient-circle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-circle__number {
+  font-size: 3.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  color: var(--white);
+}
+
+.score-circle__description {
+  color: var(--light-lavender);
+}
+
+/* skill */
+.skill {
+  padding: 1em;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__left {
+  display: flex;
+  gap: 0.5em;
+}
+
+.skill__name {
+  font-weight: var(--font-weight-bold);
+}
+
+.skill__score {
+  color: var(--dark-gray-blue);
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.skill__hundred {
+  color: var(--light-lavender);
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.skill--reaction {
+  background-color: var(--light-red-opacity);
+}
+
+.skill__name--reaction {
+  color: var(--light-red);
+}
+
+.skill--reaction {
+  background-color: var(--light-red-opacity);
+}
+
+.skill--memory {
+  background-color: var(--orangey-yellow-opacity);
+}
+
+.skill__name--memory {
+  color: var(--orangey-yellow);
+}
+
+.skill--verbal {
+  background-color: var(--green-teal-opacity);
+}
+
+.skill__name--verbal {
+  color: var(--green-teal);
+}
+
+.skill--visual {
+  background-color: var(--cobalt-blue-opacity);
+}
+
+.skill__name--visual {
+  color: var(--cobalt-blue);
+}
+
+/* btn */
+.btn {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark-gray-blue);
+  border-radius: 1.8em;
+  padding: 1em;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-medium);
+}
+
+.btn:hover {
+  background-image: var(--gradient-background);
+}
+
+/* tablet, desktop, etc */
+@media screen and (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  .card {
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 40px -15px var(--dark-gray-blue);
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .card__punctuation {
+    flex: 1 1 50%;
+    border-radius: 2rem;
+  }
+
+  .card__summary {
+    flex: 1 1 50%;
+  }
+}
